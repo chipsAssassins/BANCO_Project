@@ -1,0 +1,4 @@
+Necesitamos hacer una banco funcional, ideas principales: 
+1- Tener un id aleatorio unico para cada tarjeta obviamente definiendo los primeros 4 digitos
+2- necesitamos un usuario y contraseña
+3- cajero con depositos, retiros, consulta de saldo cambio nip
