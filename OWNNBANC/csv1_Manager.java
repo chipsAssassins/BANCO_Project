@@ -31,7 +31,7 @@ public class csv1_Manager {
     }
  
     // ─────────────────────────────────────────────
-    //  GUARDAR USUARIO NUEVO
+    //  GUARDAR USUARIO NUEVO puto
     // ─────────────────────────────────────────────
     public static void guardarUsuario(Usuarios user) {
         try {
