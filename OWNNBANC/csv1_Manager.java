@@ -9,9 +9,9 @@ public class csv1_Manager {
     private static final String FILE_PATH = "C:\\Users\\Angel Alberto\\Desktop\\BANCO_Project\\OWNNBANC\\usuarios.csv";
     private static final String ENCABEZADO = "id,nombre,email,password,NoTarjeta,NCuenta,dineroEnCuenta";
  
-    // ─────────────────────────────────────────────
-    //  OBTENER SIGUIENTE ID
-    // ─────────────────────────────────────────────
+
+    //  obtener siguiente id
+
     public static int obtenerSiguienteID(String ruta) {
         int maxID = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(ruta))) {
@@ -30,13 +30,12 @@ public class csv1_Manager {
         return maxID + 1;
     }
  
-    // ─────────────────────────────────────────────
-    //  GUARDAR USUARIO NUEVO putojhytrgjdsf
-    // ─────────────────────────────────────────────
+
+    //  nuevo usuario
     public static void guardarUsuario(Usuarios user) {
         try {
             File file
-             = new File(FILE_PATH);
+            = new File(FILE_PATH);
             boolean existe = file.exists();
             FileWriter fw = new FileWriter(file, true);
  
@@ -62,9 +61,9 @@ public class csv1_Manager {
     }
     //753008 contra AIKO
  
-    // ─────────────────────────────────────────────
-    //  LOGIN
-    // ─────────────────────────────────────────────
+
+    //  login
+
     public static Usuarios login(String email, String password) {
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
             br.readLine(); // encabezado
@@ -92,9 +91,9 @@ public class csv1_Manager {
         return null;
     }
  
-    // ─────────────────────────────────────────────
-    //  BUSCAR USUARIO POR NÚMERO DE CUENTA
-    // ─────────────────────────────────────────────
+
+    //  buscar usuario por cuenta
+
     public static Usuarios buscarPorCuenta(String numCuenta) {
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
             br.readLine();
@@ -141,9 +140,8 @@ public class csv1_Manager {
         return null;
     }
  */
-    // ─────────────────────────────────────────────
-    //  ACTUALIZAR SALDO DE UN USUARIO (por email)
-    // ─────────────────────────────────────────────
+    // actualizar saldo
+
     public static void actualizarSaldo(String email, double nuevoSaldo) {
         List<String> lineas = new ArrayList<>();
  
